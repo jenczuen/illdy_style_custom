@@ -24,15 +24,18 @@ if ( current_user_can( 'edit_theme_options' ) ) {
 }
 
 if ( $jumbotron_title || $entry || $first_button_title || $second_button_title ) {
+?>
 
-	?>
 	<div class="bottom-header front-page">
+		<img src="<?php echo esc_url( get_template_directory_uri() . '/layout/images/front-page/front-page-logo-PL.png' ); ?>"" />
+
+		<!--
 		<div class="container">
 			<div class="row">
 				<?php if ( $jumbotron_title ): ?>
 					<div class="col-sm-12">
 						<h1><?php echo $jumbotron_title; ?></h1>
-					</div><!--/.col-sm-12-->
+					</div>
 				<?php endif; ?>
 				<div class="col-sm-8 col-sm-offset-2">
 					<?php if ( $entry ): ?>
@@ -44,9 +47,12 @@ if ( $jumbotron_title || $entry || $first_button_title || $second_button_title )
 					<?php if ( $second_button_title ): ?>
 						<a href="<?php echo esc_url( $second_button_url ); ?>" title="<?php echo esc_attr( $second_button_title ); ?>" class="header-button-two"><?php echo esc_html( $second_button_title ); ?></a>
 					<?php endif; ?>
-				</div><!--/.col-sm-8.col-sm-offset-2-->
-			</div><!--/.row-->
-		</div><!--/.container-->
-	</div><!--/.bottom-header.front-page-->
+				</div>
+			</div>
+		</div>
+		-->
+	</div>
 
-<?php } ?>
+<?php 
+}
+?>
