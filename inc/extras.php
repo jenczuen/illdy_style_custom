@@ -156,7 +156,7 @@ function illdy_hex2rgb($hexColor,$opacity = 1) {
 if ( !function_exists( 'illdy_jumbotron_css' ) ) {
     function illdy_jumbotron_css(){
 
-        $illdy_jumbotron_general_image = esc_url(get_theme_mod('illdy_jumbotron_general_image', esc_url( get_template_directory_uri() . '/layout/images/front-page/front-page-header.jpg' )));
+        $illdy_jumbotron_general_image = esc_url(get_theme_mod('illdy_jumbotron_general_image', esc_url( get_template_directory_uri() . '/layout/images/front-page/front-page-header.png' )));
         $illdy_jumbotron_background_size = esc_html(get_theme_mod('illdy_jumbotron_background_size'));
         $illdy_jumbotron_background_position_y = esc_html(get_theme_mod('illdy_jumbotron_background_position_y'));
         $illdy_jumbotron_background_position_x = esc_html(get_theme_mod('illdy_jumbotron_background_position_x'));

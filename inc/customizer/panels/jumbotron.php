@@ -178,7 +178,7 @@ $wp_customize->add_control(  new Epsilon_Control_Tab( $wp_customize,
 // Background Image
 $wp_customize->add_setting( $prefix . '_jumbotron_general_image', array(
 	'sanitize_callback' => 'esc_url',
-	'default'           => esc_url( get_template_directory_uri() . '/layout/images/front-page/front-page-header.jpg' ),
+	'default'           => esc_url( get_template_directory_uri() . '/layout/images/front-page/front-page-header.png' ),
 	'transport'         => 'postMessage',
 ) );
 $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, $prefix . '_jumbotron_general_image', array(
