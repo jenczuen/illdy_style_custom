@@ -63,6 +63,7 @@ else: echo 'header-blog'; endif; ?>" style="<?php echo $style ?>">
 			<div class="row">
 				<div class="col-sm-4 col-xs-8">
 
+					<!--
 					<?php if ( ! empty( $logo_image ) ) { ?>
 						<?php echo '<a href="' . esc_url( home_url() ) . '"><img src="' . esc_url( $logo_image[0] ) . '" /></a>'; ?>
 					<?php } else { ?>
@@ -72,6 +73,7 @@ else: echo 'header-blog'; endif; ?>" style="<?php echo $style ?>">
 							<a href="<?php echo esc_url( home_url() ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" class="header-logo"><?php echo esc_html( get_bloginfo( 'name' ) ); ?></a>
 						<?php } ?>
 					<?php } ?>
+					-->
 
 				</div><!--/.col-sm-2-->
 				<div class="col-sm-8 col-xs-4">
