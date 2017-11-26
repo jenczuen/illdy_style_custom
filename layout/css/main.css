@@ -104,7 +104,7 @@ a:hover, a:focus {
 
 .front-page-section .section-header h3 {
 	margin: 0 0 5px 0;
-	color: #545454;
+	color: #656565;
 }
 .section-description img {
 	max-width: 100%;
@@ -342,7 +342,7 @@ a:hover, a:focus {
 .row-404 .error-code {
 	font-size: 34px;
     line-height: 52px;
-    color: #545454;
+    color: #656565;
     font-weight: 700;
 }
 .row-404 p {
@@ -850,7 +850,7 @@ a:hover, a:focus {
 }
 #latest-news .section-content .post .post-button:active,
 .illdy_home_parallax h3 {
-	color: #545454;
+	color: #656565;
 }
 .top-parallax-section h1,
 .top-parallax-section p {
@@ -1388,7 +1388,7 @@ a.button:hover {
 }
 
 .widget_rss cite {
-	color: #545454;
+	color: #656565;
 }
 #footer .widget_rss cite {
 	color: #fff;

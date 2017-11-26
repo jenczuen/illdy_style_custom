@@ -250,7 +250,7 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, $pref
 
 $wp_customize->add_setting( $prefix . '_about_title_color', array(
     'sanitize_callback' => 'sanitize_hex_color',
-    'default'           => '#545454',
+    'default'           => '#656565',
     'transport'         => 'postMessage',
 ) );
 $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, $prefix . '_about_title_color', array(

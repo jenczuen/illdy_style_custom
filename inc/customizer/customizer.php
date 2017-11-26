@@ -89,7 +89,7 @@ if ( ! function_exists( 'illdy_customize_register' ) ) {
 		                            'colors' => array(
 			                            'accent'        		=> '#f1d204',
 			                            'secondary_accent'		=> '#f18b6d',
-			                            'text' 					=> '#545454',
+			                            'text' 					=> '#656565',
 			                            'contrast'            	=> '#8c9597',
 			                            'hover'  				=> '#6a4d8a',
 		                            ),
@@ -100,7 +100,7 @@ if ( ! function_exists( 'illdy_customize_register' ) ) {
 		                            'colors' => array(
 			                            'accent'        		=> '#ff004f',
 			                            'secondary_accent'		=> '#f18b6d',
-			                            'text' 					=> '#545454',
+			                            'text' 					=> '#656565',
 			                            'contrast'            	=> '#8c9597',
 			                            'hover'  				=> '#482c54',
 		                            ),
@@ -111,7 +111,7 @@ if ( ! function_exists( 'illdy_customize_register' ) ) {
 		                            'colors' => array(
 			                            'accent'        		=> '#f66f6d',
 			                            'secondary_accent'		=> '#f18b6d',
-			                            'text' 					=> '#545454',
+			                            'text' 					=> '#656565',
 			                            'contrast'            	=> '#8c9597',
 			                            'hover'  				=> '#195962',
 		                            ),
@@ -122,7 +122,7 @@ if ( ! function_exists( 'illdy_customize_register' ) ) {
 		                            'colors' => array(
 			                            'accent'        		=> '#f79e27',
 			                            'secondary_accent'		=> '#f18b6d',
-			                            'text' 					=> '#545454',
+			                            'text' 					=> '#656565',
 			                            'contrast'            	=> '#8c9597',
 			                            'hover'  				=> '#e95e4e',
 		                            ),
@@ -133,7 +133,7 @@ if ( ! function_exists( 'illdy_customize_register' ) ) {
 		                            'colors' => array(
 			                            'accent'        		=> '#6ebbdc',
 			                            'secondary_accent'		=> '#f18b6d',
-			                            'text' 					=> '#545454',
+			                            'text' 					=> '#656565',
 			                            'contrast'            	=> '#8c9597',
 			                            'hover'  				=> '#2e3d51',
 		                            ),
@@ -144,7 +144,7 @@ if ( ! function_exists( 'illdy_customize_register' ) ) {
 		                            'colors' => array(
 			                            'accent'        		=> '#507fe2',
 			                            'secondary_accent'		=> '#f18b6d',
-			                            'text' 					=> '#545454',
+			                            'text' 					=> '#656565',
 			                            'contrast'            	=> '#8c9597',
 			                            'hover'  				=> '#1acdcb',
 		                            ),

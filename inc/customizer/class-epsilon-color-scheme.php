@@ -35,7 +35,7 @@ if ( ! class_exists( 'Epsilon_Color_Scheme' ) ) {
 			return array(
 				'epsilon_accent_color'               => '#f1d204',
 				'epsilon_secondary_accent_color' 	 => '#101c24',
-				'epsilon_text_color'                 => '#545454',
+				'epsilon_text_color'                 => '#656565',
 				'epsilon_contrast_color'             => '#8c9597',
 				'epsilon_hover_color'  				 => '#6a4d8a',
 			);
@@ -57,7 +57,7 @@ if ( ! class_exists( 'Epsilon_Color_Scheme' ) ) {
 				'epsilon_text_color' => array(
 					'label'       => __( 'Text Color', 'illdy' ),
 					'description' => __( 'The color used for headings.', 'illdy' ),
-					'default'     => '#545454',
+					'default'     => '#656565',
 					'section'     => 'colors'
 				),
 				
