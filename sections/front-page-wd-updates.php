@@ -32,7 +32,7 @@ if ( $post_query->have_posts()) {
 
 	?>
 
-	<section id="wd_updates" class="front-page-section">
+	<section id="wd_updates" class="front-page-section wd_posts_view">
 		<div class="section-header">
 			<div class="container">
 				<div class="row">
