@@ -40,19 +40,14 @@ $post_query_args = array(
 $post_query = new WP_Query( $post_query_args );
 
 
+$general_title = "Aktualizacje";
+$general_entry = "Tutaj będą pojawiać się nowości";
 
 if ( $post_query->have_posts() || $general_title != '' || $general_entry != '' || $button_text != '' ) {
 
 	?>
 
-
-	<section id="latest-news" class="front-page-section" style="<?php echo 'padding-top: 130px;'; ?>">
-	<!-- 
-		<section id="wd_updates" class="front-page-section" style="<?php echo 'padding-top: 130px;'; ?>">
-	-->
-
-		<h1>wd_updates</h1>
-
+	<section id="wd_updates" class="front-page-section">
 		<div class="section-header">
 			<div class="container">
 				<div class="row">
@@ -69,11 +64,6 @@ if ( $post_query->have_posts() || $general_title != '' || $general_entry != '' |
 				</div><!--/.row-->
 			</div><!--/.container-->
 		</div><!--/.section-header-->
-
-		<?php if ( $button_text ): ?>
-			<a href="<?php echo esc_url( $button_url ); ?>" title="<?php echo esc_attr( $button_text ); ?>" class="latest-news-button"><i class="fa fa-chevron-circle-right"></i><?php echo esc_html( $button_text ); ?>
-			</a>
-		<?php endif; ?>
 
 		<?php if ( $post_query->have_posts() ): ?>
 			<div class="section-content">
