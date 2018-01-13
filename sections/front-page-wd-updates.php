@@ -9,23 +9,11 @@
 <?php
 
 $blog_page_id = get_option( 'page_for_posts' );
-$button_url   = '#';
-if ( $blog_page_id ) {
-	$button_url = get_permalink( $blog_page_id );
-}
-if ( current_user_can( 'edit_theme_options' ) ) {
-	$general_title   = get_theme_mod( 'illdy_latest_news_general_title', __( 'Latest News', 'illdy' ) );
-	$general_entry   = get_theme_mod( 'illdy_latest_news_general_entry', __( 'If you are interested in the latest articles in the industry, take a sneak peek at our blog. You have got nothing to loose!', 'illdy' ) );
-	$button_text     = get_theme_mod( 'illdy_latest_news_button_text', __( 'See blog', 'illdy' ) );
-	$number_of_posts = get_theme_mod( 'illdy_latest_news_number_of_posts', absint( 3 ) );
-} else {
-	$general_title   = get_theme_mod( 'illdy_latest_news_general_title' );
-	$general_entry   = get_theme_mod( 'illdy_latest_news_general_entry' );
-	$button_text     = get_theme_mod( 'illdy_latest_news_button_text' );
-	$number_of_posts = get_theme_mod( 'illdy_latest_news_number_of_posts', absint( 3 ) );
-}
 
-$number_of_words = get_theme_mod( 'illdy_latest_news_words_number', absint( 20 ));
+$number_of_posts = 3;
+$number_of_words = 20;
+$general_title = "Aktualizacje";
+$general_entry = "Tutaj będą pojawiać się nowości";
 
 $post_query_args = array(
 	'post_type'              => array( 'post' ),
@@ -40,10 +28,7 @@ $post_query_args = array(
 $post_query = new WP_Query( $post_query_args );
 
 
-$general_title = "Aktualizacje";
-$general_entry = "Tutaj będą pojawiać się nowości";
-
-if ( $post_query->have_posts() || $general_title != '' || $general_entry != '' || $button_text != '' ) {
+if ( $post_query->have_posts()) {
 
 	?>
 
