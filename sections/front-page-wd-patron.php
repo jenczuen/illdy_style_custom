@@ -29,18 +29,25 @@ $jetpack_testimonial_query_args = array (
 
 $jetpack_testimonial_query = new WP_Query( $jetpack_testimonial_query_args );
 
+
+$general_title = "Patron";
+$general_background_image = get_template_directory_uri() . '/layout/images/patron_background.png';
+$patron_head_image = get_template_directory_uri() . '/layout/images/patron_head.png';
+$patron_name = "Paweł Włodkowic";
+$general_desc = "Awesome theme with great design and helpfull support. If you do not know how to code your own WordPress theme, but you still want a good-looking website for your business, Illdy might be exactly what you need. It is a slick theme with a lot of of features to choose from. You can customize whatever section you  want and you can rest assure that no matter what device your website is viewed on it looks  great.";
 ?>
+
+
 
 <?php if ( $general_title != '' || $jetpack_testimonial_query->have_posts() ) { ?>
 
-<section id="testimonials" class="front-page-section" style="<?php if( $general_background_image ): echo 'background-image: url('. esc_url( $general_background_image ) .')'; endif; ?>">
+<section id="wd_patron" class="front-page-section" style="<?php if( $general_background_image ): echo 'background-image: url('. esc_url( $general_background_image ) .')'; endif; ?>">
 
 <!--
 <section id="wd_patron" class="front-page-section" style="<?php echo 'padding-top: 130px;'; ?>">
 	<h1>wd_patron</h1>
 </section>
 -->
-	<h1>wd_patron</h1>
 
 	<?php if( $general_title ): ?>
 		<div class="section-header">
@@ -53,38 +60,7 @@ $jetpack_testimonial_query = new WP_Query( $jetpack_testimonial_query_args );
 			</div><!--/.container-->
 		</div><!--/.section-header-->
 	<?php endif; ?>
-	<?php if( post_type_exists( 'jetpack-testimonial' ) ): ?>
-		<?php
-		 ?>
-		<?php $count_posts = wp_count_posts( 'jetpack-testimonial' ); ?>
-		<?php if( $jetpack_testimonial_query->have_posts() ): ?>
-			<div class="section-content">
-				<div class="container">
-					<div class="row">
-						<div class="col-sm-10 col-sm-offset-1 no-padding">
-							<div class="testimonials-carousel <?php if( $count_posts->publish > 1 ): echo 'owl-carousel-enabled'; endif; ?>">
-								<?php while( $jetpack_testimonial_query->have_posts() ): ?>
-									<?php $jetpack_testimonial_query->the_post(); ?>
-									<div class="carousel-testimonial" style="<?php if( $count_posts->publish == 1 ): echo 'margin-bottom: 42px;'; endif; ?>">
-										<div class="testimonial-image">
-											<?php the_post_thumbnail( $post->ID, 'illdy-front-page-testimonials' ); ?>
-										</div><!--/.testimonial-image-->
-										<div class="testimonial-content">
-											<blockquote><q><?php echo esc_html( get_the_content() ); ?></q></blockquote>
-										</div><!--/.testimonial-content-->
-										<div class="testimonial-meta">
-											<h6><?php the_title(); ?></h6>
-										</div><!--/.testimonial-meta-->
-									</div><!--/.carousel-testimonial-->
-								<?php endwhile; ?>
-							</div><!--/.testimonials-carousel.owl-carousel-enabled-->
-						</div><!--/.col-sm-10.col-sm-offset-1.no-padding-->
-					</div><!--/.row-->
-				</div><!--/.container-->
-			</div><!--/.section-content-->
-		<?php endif; ?>
-		<?php wp_reset_postdata(); ?>
-	<?php elseif( current_user_can( 'edit_theme_options' ) ): ?>
+
 		<div class="section-content">
 			<div class="container">
 				<div class="row">
@@ -92,46 +68,15 @@ $jetpack_testimonial_query = new WP_Query( $jetpack_testimonial_query_args );
 						<div class="testimonials-carousel owl-carousel-enabled">
 							<div class="carousel-testimonial">
 								<div class="testimonial-image">
-									<img src="<?php echo get_template_directory_uri(); ?>/layout/images/front-page/front-page-testimonial-1.jpg" alt="<?php _e( 'Jane Smith', 'illdy' ); ?>" title="<?php _e( 'Jane Smith', 'illdy' ); ?>" />
+									<img src="<?php echo $patron_head_image; ?>" 
+										alt="<?php _e( $patron_name, 'illdy' ); ?>" 
+										title="<?php _e( $patron_name, 'illdy' ); ?>" />
 								</div><!--/.testimonial-image-->
 								<div class="testimonial-content">
-									<blockquote><q><?php _e( 'Awesome theme with great design and helpfull support. If you do not know how to code your own WordPress theme, but you still want a good-looking website for your business, Illdy might be exactly what you need. It is a slick theme with a lot of of features to choose from. You can customize whatever section you  want and you can rest assure that no matter what device your website is viewed on it looks  great.', 'illdy' ); ?></q></blockquote>
+									<blockquote><q><?php _e( $general_desc, 'illdy' ); ?></q></blockquote>
 								</div><!--/.testimonial-content-->
 								<div class="testimonial-meta">
-									<?php _e( 'Jane Smith', 'illdy' ); ?>
-								</div><!--/.testimonial-meta-->
-							</div><!--/.carousel-testimonial-->
-							<div class="carousel-testimonial">
-								<div class="testimonial-image">
-									<img src="<?php echo get_template_directory_uri(); ?>/layout/images/front-page/front-page-testimonial-2.jpg" alt="<?php _e( 'Jane Smith', 'illdy' ); ?>" title="<?php _e( 'Jane Smith', 'illdy' ); ?>" />
-								</div><!--/.testimonial-image-->
-								<div class="testimonial-content">
-									<blockquote><q><?php _e( 'Awesome theme with great design and helpfull support. If you do not know how to code your own WordPress theme, but you still want a good-looking website for your business, Illdy might be exactly what you need. It is a slick theme with a lot of of features to choose from. You can customize whatever section you  want and you can rest assure that no matter what device your website is viewed on it looks  great.', 'illdy' ); ?></q></blockquote>
-								</div><!--/.testimonial-content-->
-								<div class="testimonial-meta">
-									<?php _e( 'Jane Smith', 'illdy' ); ?>
-								</div><!--/.testimonial-meta-->
-							</div><!--/.carousel-testimonial-->
-							<div class="carousel-testimonial">
-								<div class="testimonial-image">
-									<img src="<?php echo get_template_directory_uri(); ?>/layout/images/front-page/front-page-testimonial-3.jpg" alt="<?php _e( 'Jane Smith', 'illdy' ); ?>" title="<?php _e( 'Jane Smith', 'illdy' ); ?>" />
-								</div><!--/.testimonial-image-->
-								<div class="testimonial-content">
-									<blockquote><q><?php _e( 'Awesome theme with great design and helpfull support. If you do not know how to code your own WordPress theme, but you still want a good-looking website for your business, Illdy might be exactly what you need. It is a slick theme with a lot of of features to choose from. You can customize whatever section you  want and you can rest assure that no matter what device your website is viewed on it looks  great.', 'illdy' ); ?></q></blockquote>
-								</div><!--/.testimonial-content-->
-								<div class="testimonial-meta">
-									<?php _e( 'Jane Smith', 'illdy' ); ?>
-								</div><!--/.testimonial-meta-->
-							</div><!--/.carousel-testimonial-->
-							<div class="carousel-testimonial">
-								<div class="testimonial-image">
-									<img src="<?php echo get_template_directory_uri(); ?>/layout/images/front-page/front-page-testimonial-4.jpg" alt="<?php _e( 'Jane Smith', 'illdy' ); ?>" title="<?php _e( 'Jane Smith', 'illdy' ); ?>" />
-								</div><!--/.testimonial-image-->
-								<div class="testimonial-content">
-									<blockquote><q><?php _e( 'Awesome theme with great design and helpfull support. If you do not know how to code your own WordPress theme, but you still want a good-looking website for your business, Illdy might be exactly what you need. It is a slick theme with a lot of of features to choose from. You can customize whatever section you  want and you can rest assure that no matter what device your website is viewed on it looks  great.', 'illdy' ); ?></q></blockquote>
-								</div><!--/.testimonial-content-->
-								<div class="testimonial-meta">
-									<?php _e( 'Jane Smith', 'illdy' ); ?>
+									<?php _e( $patron_name, 'illdy' ); ?>
 								</div><!--/.testimonial-meta-->
 							</div><!--/.carousel-testimonial-->
 						</div><!--/.testimonials-carousel.owl-carousel-enabled-->
@@ -139,7 +84,7 @@ $jetpack_testimonial_query = new WP_Query( $jetpack_testimonial_query_args );
 				</div><!--/.row-->
 			</div><!--/.container-->
 		</div><!--/.section-content-->
-	<?php endif; ?>
+
 </section><!--/#testimonials.front-page-section-->
 
 <?php } ?>
