@@ -51,7 +51,6 @@ class Illdy_Customize_Section_Pro extends WP_Customize_Section {
 	 * @return void
 	 */
 	protected function render_template() { ?>
-
 		<li id="accordion-section-{{ data.id }}" class="accordion-section control-section control-section-{{ data.type }} cannot-expand">
 
 			<h3 class="accordion-section-title">

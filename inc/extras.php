@@ -107,7 +107,8 @@ if( !function_exists( 'illdy_sections_show' ) ) {
                 'illdy_counter_general' => 'illdy_counter_general_show',
                 'illdy_panel_team' => 'illdy_team_general_show',
                 'illdy_contact_us' => 'illdy_contact_us_show',
-                'illdy_full_width' => 'illdy_full_width_general_show'
+                'illdy_full_width' => 'illdy_full_width_general_show',
+                'illdy_custom_panel_general' => 'illdy_custom_panel_general_show'
             );
 
         if ( array_key_exists( $section , $controls) ) {
@@ -131,7 +132,8 @@ if( !function_exists( 'illdy_sections' ) ) {
                 'illdy_counter_general' => 'counter',
                 'illdy_panel_team' => 'team',
                 'illdy_contact_us' => 'contact-us',
-                'illdy_full_width' => 'full-width'
+                'illdy_full_width' => 'full-width',
+                'illdy_custom_panel_general' => 'custom'
             );
 
         $sections = illdy_get_sections_position();

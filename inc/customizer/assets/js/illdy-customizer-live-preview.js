@@ -303,6 +303,17 @@
 		} );
 	} );
 
+	// Show this section
+	wp.customize( 'illdy_custom_panel_general_show', function( value ) {
+		value.bind( function( newval ) {
+			if( newval == false ) {
+				$( '#custom' ).addClass( 'customizer-display-none' );
+			} else if( newval == true ) {
+				$( '#custom' ).removeClass( 'customizer-display-none' );
+			}
+		} );
+	} );
+
 	// Title
 	wp.customize( 'illdy_about_general_title', function( value ) {
 		value.bind( function( newval ) {

@@ -181,6 +181,9 @@ if ( ! function_exists( 'illdy_customize_register' ) ) {
 		// Latest News
 		require_once get_template_directory() . '/inc/customizer/panels/latest-news.php';
 
+		// Custom Panel
+		require_once get_template_directory() . '/inc/customizer/panels/custom-panel.php';
+
 		// Counter
 		require_once get_template_directory() . '/inc/customizer/panels/counter.php';
 
