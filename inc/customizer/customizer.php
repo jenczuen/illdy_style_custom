@@ -192,6 +192,14 @@ if ( ! function_exists( 'illdy_customize_register' ) ) {
 
 		// Full Width
 		require_once get_template_directory() . '/inc/customizer/panels/full-width.php';
+
+		// WD Sections
+		require_once get_template_directory() . '/inc/customizer/panels/wd_contact.php';
+		require_once get_template_directory() . '/inc/customizer/panels/wd_essays.php';
+		require_once get_template_directory() . '/inc/customizer/panels/wd_patron.php';
+		require_once get_template_directory() . '/inc/customizer/panels/wd_projects.php';
+		require_once get_template_directory() . '/inc/customizer/panels/wd_team.php';
+		require_once get_template_directory() . '/inc/customizer/panels/wd_updates.php';
 	}
 
 	add_action( 'customize_register', 'illdy_customize_register' );

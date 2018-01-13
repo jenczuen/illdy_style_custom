@@ -292,6 +292,70 @@
 		} );
 	} );
 
+
+	// show WD Sections
+	wp.customize( 'illdy_wd_contact_show', function( value ) {
+		value.bind( function( newval ) {
+			if( newval == false ) {
+				$( '#contact' ).addClass( 'customizer-display-none' );
+			} else if( newval == true ) {
+				$( '#contact' ).removeClass( 'customizer-display-none' );
+			}
+		} );
+	} );
+
+	wp.customize( 'illdy_wd_essays_show', function( value ) {
+		value.bind( function( newval ) {
+			if( newval == false ) {
+				$( '#essays' ).addClass( 'customizer-display-none' );
+			} else if( newval == true ) {
+				$( '#essays' ).removeClass( 'customizer-display-none' );
+			}
+		} );
+	} );
+
+	wp.customize( 'illdy_wd_patron_show', function( value ) {
+		value.bind( function( newval ) {
+			if( newval == false ) {
+				$( '#patron' ).addClass( 'customizer-display-none' );
+			} else if( newval == true ) {
+				$( '#patron' ).removeClass( 'customizer-display-none' );
+			}
+		} );
+	} );
+
+	wp.customize( 'illdy_wd_projects_show', function( value ) {
+		value.bind( function( newval ) {
+			if( newval == false ) {
+				$( '#projects' ).addClass( 'customizer-display-none' );
+			} else if( newval == true ) {
+				$( '#projects' ).removeClass( 'customizer-display-none' );
+			}
+		} );
+	} );
+
+	wp.customize( 'illdy_wd_team_show', function( value ) {
+		value.bind( function( newval ) {
+			if( newval == false ) {
+				$( '#team' ).addClass( 'customizer-display-none' );
+			} else if( newval == true ) {
+				$( '#team' ).removeClass( 'customizer-display-none' );
+			}
+		} );
+	} );
+
+	wp.customize( 'illdy_wd_updates_show', function( value ) {
+		value.bind( function( newval ) {
+			if( newval == false ) {
+				$( '#updates' ).addClass( 'customizer-display-none' );
+			} else if( newval == true ) {
+				$( '#updates' ).removeClass( 'customizer-display-none' );
+			}
+		} );
+	} );
+
+
+
 	// Show this section
 	wp.customize( 'illdy_about_general_show', function( value ) {
 		value.bind( function( newval ) {
