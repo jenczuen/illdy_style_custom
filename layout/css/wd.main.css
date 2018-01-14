@@ -537,5 +537,106 @@ a.button:hover {
 
 
 
+/* 09. Team */
+#wd_team {
+	width: 100%;
+	background: #fff;
+	padding: 80px 0 100px 0;
+	text-align: center;
+	background-image: url(http://localhost/wp-content/themes/illdy/layout/images/front-page/pattern.png) !important;
+}
+
+#wd_team .section-header {
+	width: 100%;
+	margin-bottom: 85px;
+}
+
+#wd_team .section-content {
+	width: 100%;
+}
+
+#wd_team .section-content .person {
+	width: 100%;
+}
+
+#wd_team .section-content .person .person-image {
+	width: 125px;
+	margin-right: 25px;
+	float: left;
+}
+
+#wd_team .section-content .person .person-image img {
+	max-width: 100%;
+	height: auto;
+	border-radius: 50%;
+}
+
+#wd_team .section-content .person .person-content {
+	text-align: left;
+    width: calc( 100% - 150px );
+    float: right;
+}
+
+#wd_team .section-content .person .person-content h6 {
+	width: 100%;
+	margin: 12px 0 5px 0;
+	color: #5e5e5e;
+}
+
+#wd_team .section-content .person .person-content p {
+	width: 100%;
+	margin: 0 0 10px 0;
+	color: #8c9597;
+	line-height: 20px;
+}
+#wd_team .section-content .person .person-content p.person-position {
+	margin: 0 0 20px 0;
+	line-height: 26px;
+}
+
+#wd_team .section-content .person .person-content .person-content-social {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+#wd_team .section-content .person .person-content .person-content-social li {
+	margin-left: 10px;
+	float: left;
+}
+
+#wd_team .section-content .person .person-content .person-content-social li:first-child {
+	margin-left: 0;
+}
+
+#wd_team .section-content .person .person-content .person-content-social li a {
+	width: 25px;
+	height: 25px;
+	line-height: 25px;
+	display: inline-block;
+	border-radius: 50%;
+	font-size: 13px;
+	color: #fff;
+	text-align: center;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+	border: 1px solid;
+}
+
+#wd_team .section-content .person .person-content .person-content-social li a:hover {
+	opacity: 0.9;
+}
+
+#wd_team .widget_illdy_person {
+	margin-top: 40px;
+}
+
+#wd_team .widget_illdy_person:nth-child(1), #wd_team .widget_illdy_person:nth-child(2), #wd_team .widget_illdy_person:nth-child(3) {
+	margin-top: 0;
+}
+
 
 /* -------------------------------------------------------------- WD end --------------------- */

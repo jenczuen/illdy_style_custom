@@ -9,14 +9,14 @@
 <?php
 
 // SOCIAL MEDIA
-$contact_bar_facebook_url  = "contact_bar_facebook_url";
-$contact_bar_twitter_url   = "contact_bar_twitter_url";
-$contact_bar_linkedin_url  = "contact_bar_linkedin_url";
-$contact_bar_googlep_url   = "contact_bar_googlep_url";
-$contact_bar_youtube_url   = "contact_bar_youtube_url";
-$contact_bar_vimeo_url     = "contact_bar_vimeo_url";
-$contact_bar_pinterest_url = "contact_bar_pinterest_url";
-$contact_bar_instagram_url = "contact_bar_instagram_url";
+$contact_bar_facebook_url  = "#";
+$contact_bar_twitter_url   = "#";
+$contact_bar_linkedin_url  = "#";
+$contact_bar_googlep_url   = "#";
+$contact_bar_youtube_url   = "#";
+$contact_bar_vimeo_url     = "#";
+$contact_bar_pinterest_url = "#";
+$contact_bar_instagram_url = "#";
 // MAIN
 $general_title          = "Kontakt";
 $general_entry          = "Skontaktuj się z nami!";

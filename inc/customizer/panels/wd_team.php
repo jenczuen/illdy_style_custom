@@ -33,3 +33,17 @@ $wp_customize->add_control( new Epsilon_Control_Toggle( $wp_customize,
         'priority'  => 1
     ) )
 );
+
+$wp_customize->add_control(
+    new Epsilon_Control_Button(
+        $wp_customize,
+        $prefix .'_team_widget_button',
+        array(
+            'text'         => __( 'Add & Edit Members', 'illdy' ),
+            'section_id'    => 'sidebar-widgets-front-page-team-sidebar',
+            'icon'          => 'dashicons-plus',
+            'section'       => $panel_id,
+            'priority'      => 5
+        )
+    )
+);

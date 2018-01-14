@@ -7,26 +7,13 @@
  */
 ?>
 <?php
-if ( current_user_can( 'edit_theme_options' ) ) {
-	$general_title = get_theme_mod( 'illdy_team_general_title', __( 'Team', 'illdy' ) );
-	$general_entry = get_theme_mod( 'illdy_team_general_entry', __( 'Meet the people that are going to take your business to the next level.', 'illdy' ) );
-}else{
-	$general_title = get_theme_mod( 'illdy_team_general_title' );
-	$general_entry = get_theme_mod( 'illdy_team_general_entry' );
-}
+
+$general_title = "Zespół";
+$general_entry = "Oto członkowie naszej fundacji:";
 
 ?>
 
-<?php if ( $general_title != '' || $general_entry != '' || is_active_sidebar( 'front-page-team-sidebar' ) ) { ?>
-
-<section id="team" class="front-page-section">
-
-<!--
-<section id="wd_team" class="front-page-section" style="<?php echo 'padding-top: 130px;'; ?>">
-	<h1>wd_team</h1>
-</section>
--->
-	<h1>wd_team</h1>
+<section id="wd_team" class="front-page-section">
 
 	<?php if( $general_title || $general_entry ): ?>
 		<div class="section-header">
@@ -46,6 +33,8 @@ if ( current_user_can( 'edit_theme_options' ) ) {
 			</div><!--/.container-->
 		</div><!--/.section-header-->
 	<?php endif; ?>
+
+
 	<div class="section-content">
 		<div class="container">
 			<div class="row inline-columns">
@@ -69,8 +58,6 @@ if ( current_user_can( 'edit_theme_options' ) ) {
 		</div><!--/.container-->
 	</div><!--/.section-content-->
 </section><!--/#team.front-page-section-->
-
-<?php } ?>
 
 
 
