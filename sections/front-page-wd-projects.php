@@ -28,6 +28,9 @@ $post_query_args = array(
 
 $post_query = new WP_Query( $post_query_args );
 
+$read_more = "Czytaj dalej...";
+$button_text = "Zobacz wszystkie projekty";
+$button_url = home_url() . "/index.php/category/projects/";
 
 if ( $post_query->have_posts()) {
 
@@ -51,6 +54,14 @@ if ( $post_query->have_posts()) {
 			</div><!--/.container-->
 		</div><!--/.section-header-->
 
+		<a 
+			href="<?php echo esc_url( $button_url ); ?>" 
+			title="<?php echo esc_attr( $button_text ); ?>" 
+			class="latest-news-button">
+				<i class="fa fa-chevron-circle-right"></i>
+				<?php echo esc_html( $button_text ); ?>
+		</a>
+
 		<?php if ( $post_query->have_posts() ): ?>
 			<div class="section-content">
 				<div class="container">
@@ -61,17 +72,31 @@ if ( $post_query->have_posts()) {
 							<?php $post_thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'illdy-front-page-latest-news' ); ?>
 
 							<div class="illdy-blog-post col-md-4 col-sm-6 col-xs-12">
-								<div class="post" style="<?php if ( ! $post_thumbnail && !get_theme_mod( 'illdy_disable_random_featured_image' ) ): echo 'padding-top: 40px;'; endif; ?>">
+								<div class="post wd-post-on-roll-over" style="<?php 
+									if ( ! $post_thumbnail && !get_theme_mod( 'illdy_disable_random_featured_image' ) ): echo 'padding-top: 40px;'; 
+									endif; ?>">
+
 									<?php if ( has_post_thumbnail() ){ ?>
+
 										<div class="post-image" style="background-image: url('<?php echo esc_url( $post_thumbnail[0] ); ?>');"></div>
+
 									<?php }elseif ( get_theme_mod( 'illdy_disable_random_featured_image' ) ) { ?>
+
 										<div class="post-image"  style="background-image: url('<?php echo illdy_get_random_featured_image(); ?>');"></div><!--/.blog-post-image-->
+
 									<?php } ?>
-									<h5><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="post-title"><?php the_title(); ?></a></h5>
+
+									<h5>
+										<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="post-title">
+											<?php the_title(); ?>
+										</a>
+									</h5>
 									<div class="post-entry">
 										<?php echo wp_trim_words( get_the_content(), $number_of_words ); ?>
 									</div><!--/.post-entry-->
-									<a href="<?php the_permalink(); ?>" title="<?php _e( 'Read more', 'illdy' ); ?>" class="post-button"><i class="fa fa-chevron-circle-right"></i><?php _e( 'Read more', 'illdy' ); ?>
+									<a href="<?php the_permalink(); ?>" title="<?php _e( $read_more, 'illdy' ); ?>" class="post-button">
+										<i class="fa fa-chevron-circle-right"></i>
+										<?php _e( $read_more, 'illdy' ); ?>
 									</a>
 								</div><!--/.post-->
 							</div><!--/.col-sm-4-->
@@ -86,4 +111,3 @@ if ( $post_query->have_posts()) {
 	</section>
 
 <?php } ?>
-
