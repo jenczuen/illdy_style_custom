@@ -28,11 +28,31 @@
 
 .wd_posts_view .section-content .post {
 	width: 100%;
-	background-color: #f0a055;
+	background-color: #e0e0e0;
 	padding-bottom: 40px;
 	text-align: left;
 	min-height: 547px;
 }
+
+.wd-post-on-roll-over {
+	background-color: #f0a055;
+}
+
+.wd_posts_view .section-content .post .post-on-roll-over .post-entry {
+	color: #ffffff;
+}
+
+.wd_posts_view .section-content .post .post-entry {
+	margin: 40px 0 55px 0;
+	padding: 0 30px;
+	line-height: 26px;
+	color: #656565;
+	font-size: 16px;
+}
+
+
+
+
 
 .wd_posts_view .illdy-blog-post {
 	margin-top: 30px;
@@ -81,16 +101,8 @@
 }
 
 .wd_posts_view .section-content .post .post-title:hover {
-	color: #f1d204;
-	text-decoration: none;
-}
-
-.wd_posts_view .section-content .post .post-entry {
-	margin: 40px 0 55px 0;
-	padding: 0 30px;
-	line-height: 26px;
 	color: #ffffff;
-	font-size: 16px;
+	text-decoration: none;
 }
 
 .wd_posts_view .section-content .post .post-button {
@@ -98,7 +110,7 @@
 	padding: 0 30px;
 	font-size: 16px;
 	font-family: "Lato";
-	color: #c8c8c8;
+	color: #656565;
 	-webkit-transition: all 0.3s;
 	-moz-transition: all 0.3s;
 	-o-transition: all 0.3s;
@@ -109,7 +121,7 @@
 .wd_posts_view .section-content .post .post-button:hover,
 .wd_posts_view .section-content .post .post-button:focus {
 	text-decoration: none;
-	color: #6a4d8a;
+	color: #ffffff;
 }
 .wd_posts_view .section-content .post .post-button:active,
 .illdy_home_parallax h3 {

@@ -236,6 +236,9 @@ if ( ! function_exists( 'illdy_enqueue_javascripts' ) ) {
 		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 			wp_enqueue_script( 'comment-reply' );
 		}
+
+		wp_enqueue_script( 'wd_scripts.js', get_template_directory_uri() . '/layout/js/wd_scripts.js', 
+			array( 'jquery' ), '', false );
 	}
 }
 
