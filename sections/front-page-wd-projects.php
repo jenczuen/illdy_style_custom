@@ -16,6 +16,7 @@ $general_title = "Projekty";
 $general_entry = "Tutaj będą pojawiać się projekty";
 
 $post_query_args = array(
+	'category_name'          => 'projects',
 	'post_type'              => array( 'post' ),
 	'nopaging'               => false,
 	'posts_per_page'         => absint( $number_of_posts ),

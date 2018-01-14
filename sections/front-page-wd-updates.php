@@ -16,6 +16,7 @@ $general_title = "Aktualizacje";
 $general_entry = "Tutaj będą pojawiać się nowości";
 
 $post_query_args = array(
+	'category_name'          => 'news',
 	'post_type'              => array( 'post' ),
 	'nopaging'               => false,
 	'posts_per_page'         => absint( $number_of_posts ),

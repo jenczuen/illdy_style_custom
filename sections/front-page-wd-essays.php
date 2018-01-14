@@ -16,6 +16,7 @@ $general_title = "Opracowania";
 $general_entry = "Tutaj będą pojawiać się opracowania";
 
 $post_query_args = array(
+	'category_name'          => 'papers',
 	'post_type'              => array( 'post' ),
 	'nopaging'               => false,
 	'posts_per_page'         => absint( $number_of_posts ),
