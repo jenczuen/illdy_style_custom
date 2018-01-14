@@ -281,6 +281,10 @@ a.button:hover {
 
 
 
+
+
+
+
 #wd_contact label {
 	width: 100% !important;
 }
@@ -315,7 +319,7 @@ a.button:hover {
 	display: table-cell;
 	font-weight: 400;
 	font-size: 16px;
-	color: #f1d204;
+	color: #656565;
 	font-family: "Lato";
 	line-height: 26px;
 }
@@ -530,8 +534,6 @@ a.button:hover {
 	float: left;
 	border-color: #f3c3c3;
 }
-
-
 
 
 

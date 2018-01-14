@@ -8,7 +8,7 @@
 ?>
 <?php
 
-
+// SOCIAL MEDIA
 $contact_bar_facebook_url  = "contact_bar_facebook_url";
 $contact_bar_twitter_url   = "contact_bar_twitter_url";
 $contact_bar_linkedin_url  = "contact_bar_linkedin_url";
@@ -17,15 +17,22 @@ $contact_bar_youtube_url   = "contact_bar_youtube_url";
 $contact_bar_vimeo_url     = "contact_bar_vimeo_url";
 $contact_bar_pinterest_url = "contact_bar_pinterest_url";
 $contact_bar_instagram_url = "contact_bar_instagram_url";
-$email                  = "email";
-$phone                  = "phone";
-$address1               = "address1";
-$address2               = "address2";
-$general_title          = "general_title";
-$general_entry          = "general_entry";
+// MAIN
+$general_title          = "Kontakt";
+$general_entry          = "Skontaktuj się z nami!";
+// ADRESS
+$general_address_title  = "Adres fundacji";
+$address1               = "ul. Adresowa 1";
+$address2               = "00-000 Miasto";
+// CONTACT
+$customer_support_title = "Dane kontaktowe";
+$email_title            = "E-mail:";
+$email                  = "adres@email.com";
+$phone_title            = "Telefon:";
+$phone                  = "+48 555 555 555";
+// ????
 $general_contact_form_7 = "general_contact_form_7";
-$general_address_title  = "general_address_title";
-$customer_support_title = "customer_support_title";
+
 
 ?>
 
@@ -85,7 +92,8 @@ $customer_support_title = "customer_support_title";
 								<?php endif; ?>
 								<div class="box-right">
 									<?php if ( $email ): ?>
-										<span class="box-right-row"><?php _e( 'E-mail:', 'illdy' ); ?>
+										<span class="box-right-row">
+											<?php _e( $email_title, 'illdy' ); ?>
 											<a href="mailto:<?php echo esc_attr( $email ); ?>" 
 												title="<?php echo esc_attr( $email ); ?>">
 												<?php echo esc_html( $email ); ?>
@@ -94,7 +102,7 @@ $customer_support_title = "customer_support_title";
 									<?php endif; ?>
 									<?php if ( $phone ): ?>
 										<span class="box-right-row" data-customizer="contact-us-phone">
-											<?php _e( 'Phone:', 'illdy' ); ?>
+											<?php _e( $phone_title, 'illdy' ); ?>
 											<?php echo illdy_sanitize_html( $phone ); ?>
 										</span>
 									<?php endif; ?>
