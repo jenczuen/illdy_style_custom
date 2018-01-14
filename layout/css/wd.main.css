@@ -141,8 +141,9 @@ a.button {
 	width: auto;
 	height: 45px;
 	line-height: 45px;
-	background: #f1d204;
-	margin-bottom: 50px;
+	background: #f0a055;
+	margin-bottom: 0px;
+	margin-top: 20px;
 	padding: 0 35px;
 	display: inline-block;
 	font-weight: 700;

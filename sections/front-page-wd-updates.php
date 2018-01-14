@@ -29,6 +29,8 @@ $post_query_args = array(
 $post_query = new WP_Query( $post_query_args );
 
 $read_more = "Czytaj dalej...";
+$button_text = "Zobacz wszystkie aktualizacje";
+$button_url = home_url()	 . "/category/news/";
 
 if ( $post_query->have_posts()) {
 
@@ -51,6 +53,14 @@ if ( $post_query->have_posts()) {
 				</div><!--/.row-->
 			</div><!--/.container-->
 		</div><!--/.section-header-->
+
+		<a 
+			href="<?php echo esc_url( $button_url ); ?>" 
+			title="<?php echo esc_attr( $button_text ); ?>" 
+			class="latest-news-button">
+				<i class="fa fa-chevron-circle-right"></i>
+				<?php echo esc_html( $button_text ); ?>
+		</a>
 
 		<?php if ( $post_query->have_posts() ): ?>
 			<div class="section-content">
