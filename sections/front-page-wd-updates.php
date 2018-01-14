@@ -12,7 +12,7 @@ $blog_page_id = get_option( 'page_for_posts' );
 
 $number_of_posts = 3;
 $number_of_words = 20;
-$general_title = "Aktualizacje";
+$general_title = "Aktualności";
 $general_entry = "Tutaj będą pojawiać się nowości";
 
 $post_query_args = array(
@@ -29,8 +29,8 @@ $post_query_args = array(
 $post_query = new WP_Query( $post_query_args );
 
 $read_more = "Czytaj dalej...";
-$button_text = "Zobacz wszystkie aktualizacje";
-$button_url = home_url()	 . "/category/news/";
+$button_text = "Zobacz wszystkie aktualności";
+$button_url = home_url() . "/index.php/category/news/";
 
 if ( $post_query->have_posts()) {
 
