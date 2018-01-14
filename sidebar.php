@@ -17,6 +17,7 @@
 				'after_title'	=> '</h5></div>'
 			);
 
+			the_widget( 'WP_Widget_Search', 'title=' . __( 'Szukaj', 'illdy' ), $the_widget_args );
 			the_widget( 'WP_Widget_Categories', 'title=' . __( 'Kategorie', 'illdy' ), $the_widget_args );
 			the_widget( 'WP_Widget_Archives', 'title=' . __( 'Archiwa', 'illdy' ), $the_widget_args );
 

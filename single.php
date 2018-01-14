@@ -35,7 +35,19 @@ $sidebar_enabled = get_post_meta( $post->ID, 'illdy-sidebar-enable', true );
 			<?php if ( is_active_sidebar( 'blog-sidebar' ) ) { ?>
 				<div class="col-sm-4">
 					<div id="sidebar">
-						<?php dynamic_sidebar( 'blog-sidebar' ); ?>
+						<?php 
+							//dynamic_sidebar( 'blog-sidebar' ); 
+							$the_widget_args = array(
+								'before_widget'	=> '<div class="widget">',
+								'after_widget'	=> '</div>',
+								'before_title'	=> '<div class="widget-title"><h5>',
+								'after_title'	=> '</h5></div>'
+							);
+
+							the_widget( 'WP_Widget_Search', 'title=' . __( 'Szukaj', 'illdy' ), $the_widget_args );
+							the_widget( 'WP_Widget_Categories', 'title=' . __( 'Kategorie', 'illdy' ), $the_widget_args );
+							the_widget( 'WP_Widget_Archives', 'title=' . __( 'Archiwa', 'illdy' ), $the_widget_args );
+						?>
 					</div>
 				</div>
 			<?php } ?>
