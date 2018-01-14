@@ -425,7 +425,7 @@ a.button:hover {
 }
 
 #wd_contact .section-content .wpcf7-form .wpcf7-response-output.wpcf7-mail-sent-ng {
-	color: #fff;
+	color: #656565;
 }
 
 #wd_contact .section-content .wpcf7-form .wpcf7-response-output {
@@ -512,7 +512,7 @@ a.button:hover {
 	display: inline-block;
 	font-weight: 700;
 	color: #fff;
-	background-color: #f1d204;
+	background-color: #f0a055;
 	float: right;
 	-webkit-transition: all 0.3s;
 	-moz-transition: all 0.3s;
