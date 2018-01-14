@@ -201,6 +201,8 @@ if ( ! function_exists( 'illdy_enqueue_stylesheets' ) ) {
 		wp_enqueue_style( 'illdy-main', get_template_directory_uri() . '/layout/css/main.css', array(), '', 'all' );
 		wp_enqueue_style( 'illdy-custom', get_template_directory_uri() . '/layout/css/custom.min.css', array(), '', 'all' );
 		wp_enqueue_style( 'illdy-style', get_stylesheet_uri(), array(), '1.0.16', 'all' );
+
+		wp_enqueue_style( 'illdy-wd-main', get_template_directory_uri() . '/layout/css/wd.main.css', array(), '', 'all' );
 	}
 }
 
