@@ -9,6 +9,18 @@
 <div class="col-sm-4">
 	<div id="sidebar">
 		<?php
+
+			$the_widget_args = array(
+				'before_widget'	=> '<div class="widget">',
+				'after_widget'	=> '</div>',
+				'before_title'	=> '<div class="widget-title"><h5>',
+				'after_title'	=> '</h5></div>'
+			);
+
+			the_widget( 'WP_Widget_Categories', 'title=' . __( 'Kategorie', 'illdy' ), $the_widget_args );
+			the_widget( 'WP_Widget_Archives', 'title=' . __( 'Archiwa', 'illdy' ), $the_widget_args );
+
+/*
 		if( is_active_sidebar( 'blog-sidebar' ) ):
 			dynamic_sidebar( 'blog-sidebar' );
 		else:
@@ -16,12 +28,13 @@
 				'before_widget'	=> '<div class="widget">',
 				'after_widget'	=> '</div>',
 				'before_title'	=> '<div class="widget-title"><h3>',
-				'after_title'	=> '</h3></div>'
+				'after_title'	=> '</h5></div>'
 			);
 
 			the_widget( 'WP_Widget_Categories', 'title=' . __( 'Categories', 'illdy' ), $the_widget_args );
 			the_widget( 'WP_Widget_Archives', 'title=' . __( 'Archive', 'illdy' ), $the_widget_args );
 		endif;
+*/		
 		?>
 	</div><!--/#sidebar-->
 </div><!--/.col-sm-4-->
