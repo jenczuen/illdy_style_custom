@@ -32,6 +32,7 @@ $phone_title            = "Telefon:";
 $phone                  = "+48 555 555 555";
 // ????
 $general_contact_form_7 = "general_contact_form_7";
+$general_contact_form_7    = get_theme_mod( 'illdy_contact_us_general_contact_form_7' );
 
 
 ?>
