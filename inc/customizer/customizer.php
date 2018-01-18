@@ -85,6 +85,17 @@ if ( ! function_exists( 'illdy_customize_register' ) ) {
                             'choices'     => array(
 	                            array(
 		                            'id'     => 'Illdy',
+		                            'name'   => 'Default WD',
+		                            'colors' => array(
+			                            'accent'        		=> '#f0a055',
+			                            'secondary_accent'		=> '#f0a055',
+			                            'text' 					=> '#656565',
+			                            'contrast'            	=> '#656565',
+			                            'hover'  				=> '#f0a055',
+		                            ),
+	                            ),
+	                            array(
+		                            'id'     => 'Illdy',
 		                            'name'   => 'Default',
 		                            'colors' => array(
 			                            'accent'        		=> '#f1d204',
