@@ -101,7 +101,7 @@
 }
 
 .wd_posts_view .section-content .post .post-title:hover {
-	color: #ffffff;
+	color: #f0a055;
 	text-decoration: none;
 }
 
@@ -121,7 +121,7 @@
 .wd_posts_view .section-content .post .post-button:hover,
 .wd_posts_view .section-content .post .post-button:focus {
 	text-decoration: none;
-	color: #ffffff;
+	color: #f0a055;
 }
 .wd_posts_view .section-content .post .post-button:active,
 .illdy_home_parallax h3 {
