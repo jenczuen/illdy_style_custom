@@ -661,5 +661,34 @@ a.button:hover {
 	margin-top: 0;
 }
 
+.wd-top-menu {
+	text-align: right;
+}
 
+.wd-top-menu ul {
+    list-style-type: none;
+    margin: 0 50px 0 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: none;
+    display: inline-block;
+}
+
+.wd-top-menu li {
+    float: left;
+}
+
+.wd-top-menu li a {
+    display: block;
+    color: #656565;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+.wd-top-menu li a:hover {
+    background-color: #f0a055;
+    color: white;
+}
 /* -------------------------------------------------------------- WD end --------------------- */

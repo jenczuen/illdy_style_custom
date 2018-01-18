@@ -58,6 +58,11 @@ if ( ( is_single() || is_page() || is_archive() ) && get_theme_mod( 'illdy_archi
 <?php endif; ?>
 <header id="header" class="<?php if ( get_option( 'show_on_front' ) == 'page' && is_front_page() ): echo 'header-front-page';
 else: echo 'header-blog'; endif; ?>" style="<?php echo $style ?>">
+
+	<?php if (is_front_page()) {
+		get_template_part( 'sections/front-page', 'wd-top-menu' );
+	} ?>
+
 	<div class="top-header">
 		<div class="container">
 			<div class="row">
@@ -76,20 +81,23 @@ else: echo 'header-blog'; endif; ?>" style="<?php echo $style ?>">
 					-->
 
 				</div><!--/.col-sm-2-->
-				<div class="col-sm-8 col-xs-4">
-					<nav class="header-navigation">
-					<?php
-						wp_nav_menu( array(
-							'theme_location'  => 'primary-menu',
-							'menu'            => '',
-							'container'       => false,
-							'menu_class'      => 'clearfix',
-							'menu_id'         => '',
-						) );
-					?>
-					</nav>
-					<button class="open-responsive-menu"><i class="fa fa-bars"></i></button>
-				</div><!--/.col-sm-10-->
+				<?php if (!is_front_page()) { ?>
+					<div class="col-sm-8 col-xs-4">
+						<nav class="header-navigation">
+						<?php
+							wp_nav_menu( array(
+								'theme_location'  => 'primary-menu',
+								'menu'            => '',
+								'container'       => false,
+								'menu_class'      => 'clearfix',
+								'menu_id'         => '',
+							) );
+						?>
+						</nav>
+						<button class="open-responsive-menu"><i class="fa fa-bars"></i></button>
+					</div><!--/.col-sm-10-->
+				<?php } ?>
+
 			</div><!--/.row-->
 		</div><!--/.container-->
 	</div><!--/.top-header-->
