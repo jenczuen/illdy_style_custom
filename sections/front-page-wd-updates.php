@@ -54,14 +54,6 @@ if ( $post_query->have_posts()) {
 			</div><!--/.container-->
 		</div><!--/.section-header-->
 
-		<a 
-			href="<?php echo esc_url( $button_url ); ?>" 
-			title="<?php echo esc_attr( $button_text ); ?>" 
-			class="latest-news-button">
-				<i class="fa fa-chevron-circle-right"></i>
-				<?php echo esc_html( $button_text ); ?>
-		</a>
-
 		<?php if ( $post_query->have_posts() ): ?>
 			<div class="section-content">
 				<div class="container">
@@ -107,6 +99,14 @@ if ( $post_query->have_posts()) {
 			</div><!--/.section-content-->
 		<?php endif; ?>
 		<?php wp_reset_postdata(); ?>
+
+		<a 
+			href="<?php echo esc_url( $button_url ); ?>" 
+			title="<?php echo esc_attr( $button_text ); ?>" 
+			class="latest-news-button">
+				<i class="fa fa-chevron-circle-right"></i>
+				<?php echo esc_html( $button_text ); ?>
+		</a>
 
 	</section>
 
