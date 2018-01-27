@@ -27,7 +27,12 @@ if ( $jumbotron_title || $entry || $first_button_title || $second_button_title )
 ?>
 
 	<div class="bottom-header front-page">
-		<img src="<?php echo esc_url( get_template_directory_uri() . '/layout/images/front-page/front-page-logo-PL.png' ); ?>"" />
+		<img src="
+			<?php 
+				echo esc_url(get_template_directory_uri() . '/layout/images/front-page/front-page-logo-PL.png' ); 
+			?>" 
+			class="wd-main-logs-image"
+		/>
 
 		<!--
 		<div class="container">

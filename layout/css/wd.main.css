@@ -713,4 +713,14 @@ a.button:hover {
     background-color: #f0a055;
     color: white;
 }
+
+
+
+.wd-main-logs-image {
+	vertical-align: middle;
+	width: 30%;
+	height: auto;
+	min-width: 300px;
+}
+
 /* -------------------------------------------------------------- WD end --------------------- */
