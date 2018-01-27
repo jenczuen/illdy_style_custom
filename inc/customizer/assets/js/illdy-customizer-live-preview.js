@@ -294,6 +294,16 @@
 
 
 	// show WD Sections
+	wp.customize( 'illdy_wd_institute_show', function( value ) {
+		value.bind( function( newval ) {
+			if( newval == false ) {
+				$( '#contact' ).addClass( 'customizer-display-none' );
+			} else if( newval == true ) {
+				$( '#contact' ).removeClass( 'customizer-display-none' );
+			}
+		} );
+	} );
+		
 	wp.customize( 'illdy_wd_contact_show', function( value ) {
 		value.bind( function( newval ) {
 			if( newval == false ) {

@@ -205,6 +205,7 @@ if ( ! function_exists( 'illdy_customize_register' ) ) {
 		require_once get_template_directory() . '/inc/customizer/panels/full-width.php';
 
 		// WD Sections
+		require_once get_template_directory() . '/inc/customizer/panels/wd_institute.php';
 		require_once get_template_directory() . '/inc/customizer/panels/wd_contact.php';
 		require_once get_template_directory() . '/inc/customizer/panels/wd_essays.php';
 		require_once get_template_directory() . '/inc/customizer/panels/wd_patron.php';

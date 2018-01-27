@@ -1,4 +1,8 @@
 /* -------------------------------------------------------------- WD start --------------------- */
+#wd_institute {
+	padding-top: 50px;
+}
+
 .wd_posts_view {
 	width: 100%;
 	background-color: none;
@@ -34,6 +38,10 @@
 	min-height: 547px;
 }
 
+#wd_institute .wd_institute_post_text {
+	min-height: 347px;	
+}
+
 .wd-post-on-roll-over {
 	background-color: #f0a055;
 }
@@ -52,12 +60,15 @@
 
 
 
-
-
 .wd_posts_view .illdy-blog-post {
 	margin-top: 30px;
 	min-height: 540px;
 }
+
+#wd_institute .wd_institute_post_container {
+	min-height: 340px;	
+}
+
 .wd_posts_view .owl-item .illdy-blog-post {
 	width: 100%;
 }

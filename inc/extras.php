@@ -109,6 +109,7 @@ if( !function_exists( 'illdy_sections_show' ) ) {
                 'illdy_contact_us' => 'illdy_contact_us_show',
                 'illdy_full_width' => 'illdy_full_width_general_show',
                 // WD sections
+                'illdy_wd_institute' => 'illdy_wd_institute_show',
                 'illdy_wd_contact' => 'illdy_wd_contact_show',
                 'illdy_wd_essays' => 'illdy_wd_essays_show',
                 'illdy_wd_patron' => 'illdy_wd_patron_show',
@@ -140,6 +141,7 @@ if( !function_exists( 'illdy_sections' ) ) {
                 'illdy_contact_us' => 'contact-us',
                 'illdy_full_width' => 'full-width',
                 // WD sections
+                'illdy_wd_institute' => 'wd-institute',
                 'illdy_wd_contact' => 'wd-contact',
                 'illdy_wd_essays' => 'wd-essays',
                 'illdy_wd_patron' => 'wd-patron',
