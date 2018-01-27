@@ -47,7 +47,9 @@ if ( $post_query->have_posts()) {
 					<?php endif; ?>
 					<?php if ( $general_entry ): ?>
 						<div class="col-sm-10 col-sm-offset-1">
-							<div class="section-description"><?php echo do_shortcode(wp_kses_post( $general_entry )); ?></div>
+							<div class="section-description">
+								<?php echo do_shortcode(wp_kses_post( $general_entry )); ?>
+							</div>
 						</div><!--/.col-sm-10.col-sm-offset-1-->
 					<?php endif; ?>
 				</div><!--/.row-->
@@ -60,13 +62,26 @@ if ( $post_query->have_posts()) {
 					<div class="row blog-carousel">
 						<?php $counter = 0; ?>
 						<?php while ( $post_query->have_posts() ): ?>
+
 							<?php $post_query->the_post(); ?>
-							<?php $post_thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'illdy-front-page-latest-news' ); ?>
+							<?php $post_thumbnail = wp_get_attachment_image_src( 
+								get_post_thumbnail_id( $post->ID ), 
+								'illdy-front-page-latest-news' ); 
+							?>
 
 							<div class="illdy-blog-post col-md-4 col-sm-6 col-xs-12">
-								<div class="post wd-post-on-roll-over" style="<?php 
-									if ( ! $post_thumbnail && !get_theme_mod( 'illdy_disable_random_featured_image' ) ): echo 'padding-top: 40px;'; 
-									endif; ?>">
+
+								<div class="post" style="<?php 
+									if ( ! $post_thumbnail && 
+											!get_theme_mod( 'illdy_disable_random_featured_image' ) ): 
+										echo 'padding-top: 40px;'; 
+									endif; ?>"
+								>
+
+									<a class="post-block-link" href="<?php the_permalink(); ?>" 
+										title="<?php the_title(); ?>">
+										<span class="post-block-link-span"></span>
+									</a>
 
 									<?php if ( has_post_thumbnail() ){ ?>
 

@@ -72,17 +72,17 @@ if ( $post_query->have_posts()) {
 
 							<div class="illdy-blog-post col-md-4 col-sm-6 col-xs-12">
 
-								<a class="post-block-link" href="<?php the_permalink(); ?>" 
-									title="<?php the_title(); ?>">
-									<span class="post-block-link-span"></span>
-								</a>
-
 								<div class="post" style="<?php 
 									if ( ! $post_thumbnail && 
 											!get_theme_mod( 'illdy_disable_random_featured_image' ) ): 
 										echo 'padding-top: 40px;'; 
 									endif; ?>"
 								>
+
+									<a class="post-block-link" href="<?php the_permalink(); ?>" 
+										title="<?php the_title(); ?>">
+										<span class="post-block-link-span"></span>
+									</a>
 
 									<?php if ( has_post_thumbnail() ){ ?>
 
