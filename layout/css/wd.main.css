@@ -686,6 +686,7 @@ a.button:hover {
 
 .wd-top-menu {
 	text-align: right;
+	background-color: #e0e0e0;
 }
 
 .wd-top-menu ul {
@@ -693,8 +694,8 @@ a.button:hover {
     margin: 0 50px 0 0;
     padding: 0;
     overflow: hidden;
-    background-color: none;
     display: inline-block;
+    font-size: 20px;
 }
 
 .wd-top-menu li {
