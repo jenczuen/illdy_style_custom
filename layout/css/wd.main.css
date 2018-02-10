@@ -615,8 +615,6 @@ a.button:hover {
 
 #wd_team .section-content .person .person-content {
 	text-align: left;
-    width: calc( 100% - 150px );
-    float: right;
 }
 
 #wd_team .section-content .person .person-content h6 {
@@ -674,8 +672,8 @@ a.button:hover {
 
 #wd_team .widget_illdy_person {
 	margin-top: 40px;
-	width: 50%;
-	padding-right: 50px;
+	padding-left: 25px;
+	padding-right: 25px;
 }
 
 #wd_team .widget_illdy_person:nth-child(1), #wd_team .widget_illdy_person:nth-child(2), #wd_team .widget_illdy_person:nth-child(3) {
@@ -715,7 +713,7 @@ a.button:hover {
 }
 
 
-/* ---------------------------------------------------------------------------------- RANDOM  */
+/* ---------------------------------------------------------------------------------- LOGO  */
 .wd-main-logo-image {
 	vertical-align: middle;
 	width: 30%;
