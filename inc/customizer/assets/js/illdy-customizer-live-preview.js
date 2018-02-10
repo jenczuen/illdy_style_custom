@@ -364,6 +364,15 @@
 		} );
 	} );
 
+	wp.customize( 'illdy_wd_partners_show', function( value ) {
+		value.bind( function( newval ) {
+			if( newval == false ) {
+				$( '#wd_partners' ).addClass( 'customizer-display-none' );
+			} else if( newval == true ) {
+				$( '#wd_partners' ).removeClass( 'customizer-display-none' );
+			}
+		} );
+	} );
 
 
 	// Show this section

@@ -115,7 +115,8 @@ if( !function_exists( 'illdy_sections_show' ) ) {
                 'illdy_wd_patron' => 'illdy_wd_patron_show',
                 'illdy_wd_projects' => 'illdy_wd_projects_show',
                 'illdy_wd_team' => 'illdy_wd_team_show',
-                'illdy_wd_updates' => 'illdy_wd_updates_show'
+                'illdy_wd_updates' => 'illdy_wd_updates_show',
+                'illdy_wd_partners' => 'illdy_wd_partners_show'
             );
 
         if ( array_key_exists( $section , $controls) ) {
@@ -147,7 +148,8 @@ if( !function_exists( 'illdy_sections' ) ) {
                 'illdy_wd_patron' => 'wd-patron',
                 'illdy_wd_projects' => 'wd-projects',
                 'illdy_wd_team' => 'wd-team',
-                'illdy_wd_updates' => 'wd-updates'
+                'illdy_wd_updates' => 'wd-updates',
+                'illdy_wd_partners' => 'wd-partners'
             );
 
         $sections = illdy_get_sections_position();
