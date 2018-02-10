@@ -1,8 +1,13 @@
-/* -------------------------------------------------------------- WD start --------------------- */
+/* ---------------------------------------------------------------------------------- INSTITUTE  */
 #wd_institute {
 	padding-top: 50px;
 }
 
+#wd_institute .wd_institute_post_container {
+	min-height: 340px;	
+}
+
+/* ---------------------------------------------------------------------------------- POSTS  */
 .wd_posts_view {
 	width: 100%;
 	background-color: none;
@@ -58,15 +63,9 @@
 	font-size: 16px;
 }
 
-
-
 .wd_posts_view .illdy-blog-post {
 	margin-top: 30px;
 	min-height: 540px;
-}
-
-#wd_institute .wd_institute_post_container {
-	min-height: 340px;	
 }
 
 .wd_posts_view .owl-item .illdy-blog-post {
@@ -99,10 +98,6 @@
 .wd_posts_view .illdy-blog-post h5 {
 	margin: 0;
 }
-
-
-
-
 
 .wd_posts_view .post-block-link-span {
 	position:absolute;
@@ -206,21 +201,16 @@ a.button:hover {
 }
 
 
-
-
+/* ---------------------------------------------------------------------------------- PROJECTS  */
 #wd_projects {
 	width: 100%;
 	background: #fff;
-	padding: 40px;
 	text-align: center;
 	background-image: url('../images/front-page/pattern.png') !important;
 }
 
 
-
-
-
-
+/* ---------------------------------------------------------------------------------- PATRON  */
 #wd_patron {
 	width: 100%;
 	padding: 50px 0 30px 0;
@@ -336,12 +326,7 @@ a.button:hover {
 }
 
 
-
-
-
-
-
-
+/* ---------------------------------------------------------------------------------- CONTACT  */
 #wd_contact label {
 	width: 100% !important;
 }
@@ -593,8 +578,7 @@ a.button:hover {
 }
 
 
-
-/* 09. Team */
+/* ---------------------------------------------------------------------------------- TEAM  */
 #wd_team {
 	width: 100%;
 	background: #fff;
@@ -698,6 +682,8 @@ a.button:hover {
 	margin-top: 0;
 }
 
+
+/* ---------------------------------------------------------------------------------- TOP MENU  */
 .wd-top-menu {
 	text-align: right;
 	background-color: #e0e0e0;
@@ -729,12 +715,10 @@ a.button:hover {
 }
 
 
-
-.wd-main-logs-image {
+/* ---------------------------------------------------------------------------------- RANDOM  */
+.wd-main-logo-image {
 	vertical-align: middle;
 	width: 30%;
 	height: auto;
 	min-width: 300px;
 }
-
-/* -------------------------------------------------------------- WD end --------------------- */

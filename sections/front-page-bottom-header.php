@@ -31,7 +31,7 @@ if ( $jumbotron_title || $entry || $first_button_title || $second_button_title )
 			<?php 
 				echo esc_url(get_template_directory_uri() . '/layout/images/front-page/front-page-logo-PL.png' ); 
 			?>" 
-			class="wd-main-logs-image"
+			class="wd-main-logo-image"
 		/>
 
 		<!--
