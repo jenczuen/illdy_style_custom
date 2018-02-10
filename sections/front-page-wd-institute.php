@@ -13,7 +13,6 @@ $blog_page_id = get_option( 'page_for_posts' );
 $number_of_posts = 3;
 $number_of_words = 20;
 $general_title = "Instytut";
-$general_entry = "Opis instytutu";
 
 $post_query_args = array(
 	'category_name'          => 'institute',
@@ -44,13 +43,20 @@ if ( $post_query->have_posts()) {
 							<h3><?php echo do_shortcode(wp_kses_post( $general_title )); ?></h3>
 						</div><!--/.col-sm-12-->
 					<?php endif; ?>
-					<?php if ( $general_entry ): ?>
+
 						<div class="col-sm-10 col-sm-offset-1">
 							<div class="section-description">
-								<?php echo do_shortcode(wp_kses_post( $general_entry )); ?>
+<span style="font-weight:bold">Instytut Pawła Włodkowica</span> jest niezależnym ośrodkiem badawczym i edukacyjnym. Główne obszary działalności IPW związane są z historią reżimów totalitarnych i dyktatur oraz oporu przeciwko nim. Instytut zajmuje się także kwestiami związanymi z polityką historyczną i sferą pamięci, w szczególności konfliktami pamięci.
+<br><br>
+Działalność Instytutu Pawła Włodkowica można wesprzeć poprzez wpłatę 
+na konto:
+<br>
+51 1050 1575 1000 0090 3137 2783
+<br>
+(z dopiskiem „darowizna na realizację celów statutowych”)
 							</div>
 						</div><!--/.col-sm-10.col-sm-offset-1-->
-					<?php endif; ?>
+
 				</div><!--/.row-->
 			</div><!--/.container-->
 		</div><!--/.section-header-->
