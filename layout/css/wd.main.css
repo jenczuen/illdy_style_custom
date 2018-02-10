@@ -598,14 +598,15 @@ a.button:hover {
 #wd_team {
 	width: 100%;
 	background: #fff;
-	padding: 80px 0 100px 0;
+	padding: 1px 0 50px 0;
 	text-align: center;
 	background-image: url('../images/front-page/pattern.png') !important;
 }
 
 #wd_team .section-header {
 	width: 100%;
-	margin-bottom: 85px;
+	margin-top: 70px;
+	margin-bottom: 40px;
 }
 
 #wd_team .section-content {

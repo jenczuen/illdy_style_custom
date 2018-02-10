@@ -361,6 +361,12 @@ if ( ! function_exists( 'illdy_widgets' ) ) {
 			'after_title'   => '',
 		) );
 
+
+
+
+		//----------------------------------------------------------- wd teams 
+
+/*
 		// Team Sidebar
 		register_sidebar( array(
 			'name'          => __( 'Front page - Team Sidebar', 'illdy' ),
@@ -371,6 +377,41 @@ if ( ! function_exists( 'illdy_widgets' ) ) {
 			'before_title'  => '',
 			'after_title'   => '',
 		) );
+*/
+
+
+		register_sidebar( array(
+			'name'          => __( 'Front page - WD Council', 'illdy' ),
+			'id'            => 'front-page-wd-team-council-sidebar',
+			'description'   => __( 'Description', 'illdy' ),
+			'before_widget' => '<div id="%1$s" class="col-sm-4 col-sm-offset-0 col-xs-10 col-xs-offset-1 %2$s">',
+			'after_widget'  => '</div>',
+			'before_title'  => '',
+			'after_title'   => '',
+		) );
+
+		register_sidebar( array(
+			'name'          => __( 'Front page - WD Management', 'illdy' ),
+			'id'            => 'front-page-wd-team-management-sidebar',
+			'description'   => __( 'Description', 'illdy' ),
+			'before_widget' => '<div id="%1$s" class="col-sm-4 col-sm-offset-0 col-xs-10 col-xs-offset-1 %2$s">',
+			'after_widget'  => '</div>',
+			'before_title'  => '',
+			'after_title'   => '',
+		) );
+
+		register_sidebar( array(
+			'name'          => __( 'Front page - WD Coworkers', 'illdy' ),
+			'id'            => 'front-page-wd-team-coworkers-sidebar',
+			'description'   => __( 'Description', 'illdy' ),
+			'before_widget' => '<div id="%1$s" class="col-sm-4 col-sm-offset-0 col-xs-10 col-xs-offset-1 %2$s">',
+			'after_widget'  => '</div>',
+			'before_title'  => '',
+			'after_title'   => '',
+		) );
+		//----------------------------------------------------------- wd teams end
+
+
 
 		// Full Width
 		register_sidebar( array(
