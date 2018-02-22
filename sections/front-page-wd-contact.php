@@ -8,32 +8,32 @@
 ?>
 <?php
 
-// SOCIAL MEDIA
-$contact_bar_facebook_url  = "#";
-$contact_bar_twitter_url   = "#";
-$contact_bar_linkedin_url  = "#";
-$contact_bar_googlep_url   = "#";
-$contact_bar_youtube_url   = "#";
-$contact_bar_vimeo_url     = "#";
-$contact_bar_pinterest_url = "#";
-$contact_bar_instagram_url = "#";
 // MAIN
 $general_title          = "Kontakt";
 $general_entry          = "Skontaktuj się z nami!";
-// ADRESS
 $general_address_title  = "Adres fundacji";
-$address1               = "ul. Adresowa 1";
-$address2               = "00-000 Miasto";
-// CONTACT
 $customer_support_title = "Dane kontaktowe";
 $email_title            = "E-mail:";
-$email                  = "kontakt@instytutwlodkowica.pl";
 $phone_title            = "Telefon:";
-$phone                  = "+48 555 555 555";
-// ????
-$general_contact_form_7 = "general_contact_form_7";
-$general_contact_form_7    = get_theme_mod( 'illdy_contact_us_general_contact_form_7' );
 
+$address1 = get_theme_mod( 'illdy_wd_contact_address1' );
+$address2 = get_theme_mod( 'illdy_wd_contact_address2' );
+$email    = get_theme_mod( 'illdy_wd_contact_email' );
+$phone    = get_theme_mod( 'illdy_wd_contact_phone' );
+
+// SOCIAL MEDIA
+$contact_bar_facebook_url  = "#";
+$contact_bar_twitter_url   = false;
+$contact_bar_linkedin_url  = false;
+$contact_bar_googlep_url   = false;
+$contact_bar_youtube_url   = false;
+$contact_bar_vimeo_url     = false;
+$contact_bar_pinterest_url = false;
+$contact_bar_instagram_url = false;
+
+
+$general_contact_form_7 = "general_contact_form_7";
+$general_contact_form_7 = get_theme_mod( 'illdy_contact_us_general_contact_form_7' );
 
 ?>
 
