@@ -23,13 +23,21 @@ if(!function_exists('illdy_body_classes')) {
  */
 if(!function_exists('illdy_comment')) {
     function illdy_comment( $comment, $args, $depth ) {
+
+        $txt_id_comment_awaiting_moderation = "Twój komentarz czeka na zatwierdzenie";
+        $txt_id_time_and_date = '%1$s o %2$s';
+
         $GLOBALS['comment'] = $comment;
         switch ( $comment->comment_type ) :
             case 'pingback' :
             case 'trackback' :
         ?>
         <li class="post pingback">
-            <p><?php _e( 'Pingback:', 'illdy' ); ?> <?php comment_author_link(); ?><?php edit_comment_link( __( '(Edit)', 'illdy' ), ' ' ); ?></p>
+            <p>
+                <?php _e( 'Pingback:', 'illdy' ); ?>
+                <?php comment_author_link(); ?>
+                <?php edit_comment_link( __( '(Edit)', 'illdy' ), ' ' ); ?>
+            </p>
         <?php
                 break;
             default :
@@ -44,12 +52,30 @@ if(!function_exists('illdy_comment')) {
                     </div><!--/.col-sm-2-->
                     <div class="col-sm-10">
                         <?php printf( __( '%s', 'illdy' ), sprintf( '%s', get_comment_author_link() ) ); ?>
-                        <time class="comment-time" datetime="<?php printf( '%s-%s-%s', get_the_date( 'Y' ), get_the_date( 'm' ), get_the_date( 'd' ) ); ?>"><?php printf( __( '%1$s at %2$s', 'illdy' ), get_comment_date(), get_comment_time() ); ?></time>
+                        <time 
+                            class="comment-time" 
+                            datetime="
+                                <?php 
+                                    printf( '%s-%s-%s', 
+                                        get_the_date( 'Y' ), 
+                                        get_the_date( 'm' ), 
+                                        get_the_date( 'd' ) 
+                                    );
+                                ?>
+                            ">
+                            <?php 
+                                printf( 
+                                    __( $txt_id_time_and_date, 'illdy' ), 
+                                    get_comment_date(), 
+                                    get_comment_time() 
+                                ); 
+                            ?>
+                        </time>
                         <div class="comment-entry markup-format">
                             <?php comment_text(); ?>
                             <?php
                             if(  $comment->comment_approved == '0' ):
-                                _e( 'Your comment is awaiting moderation.', 'illdy' );
+                                _e( $txt_id_comment_awaiting_moderation, 'illdy' );
                             endif;
                             ?>
                         </div><!--/.comment-entry.markup-format-->
