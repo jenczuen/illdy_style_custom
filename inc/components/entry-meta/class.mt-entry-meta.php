@@ -60,6 +60,12 @@ if( !class_exists( 'Illdy_Entry_Meta_Output' ) ) {
         public function single_entry_meta_output() {
             global $post;
 
+            $txt_id_comments = "liczba komentarzy: ";
+            $txt_id_tags = "Tagi:";
+            $txt_id_1_comment = "1 komentarz";
+            $txt_id_no_comments = "brak komentarzy";
+            $txt_id_comments_are_off_for_this_post = "Komentarze dla tego postu zostały wyłączone";
+
             $categories_list = get_the_category_list( esc_html__( ', ', 'illdy' ) );
             $number_comments = get_comments_number();
 
@@ -68,12 +74,61 @@ if( !class_exists( 'Illdy_Entry_Meta_Output' ) ) {
 
             if( $display_post_posted_on_meta == 1 ) {
                 $output = '';
+                $output .= '<div class="blog-post-meta">';
+                $output .= 
+                    '<span class="post-meta-author"><i class="fa fa-user"></i>'
+                    . esc_html( get_the_author() ) 
+                    .'</span>';
 
-                 $output .= '<div class="blog-post-meta">';
-                    $output .= '<span class="post-meta-author"><i class="fa fa-user"></i>'. esc_html( get_the_author() ) .'</span>';
-                    $output .= '<span class="post-meta-time"><i class="fa fa-calendar"></i><time datetime="'. sprintf( '%s-%s-%s', get_the_date( 'Y' ), get_the_date( 'm' ), get_the_date( 'd' ) ) .'">'. get_the_date().'</time></span>';
-                    $output .= '<span class="post-meta-categories"><i class="fa fa-folder-o" aria-hidden="true"></i>'.$categories_list.'</span>';
-                    $output .= ( ( $display_number_comments == 1 ) ? ( comments_open() ) ? ( $number_comments == 0 ) ? sprintf( '<span class="post-meta-comments"><i class="fa fa-comment-o"></i>'. __( 'No comments', 'illdy' ) .'</span>' ) : ( $number_comments > 1 ) ? sprintf( '<span class="post-meta-comments"><i class="fa fa-comment-o"></i><a class="meta-comments" href="%s" title="%s '. __( 'comments', 'illdy' ) .'">%s '. __( 'comments', 'illdy' ) .'</a></span>', get_comments_link(), $number_comments, $number_comments ) : sprintf( '<span class="post-meta-comments"><i class="fa fa-comment-o"></i><a class="meta-comments" href="%s" title="'. __( '1 comment', 'illdy' ) .'">'. __( '1 comment', 'illdy' ) .'</a></span>', get_comments_link() ) : sprintf( '<span class="post-meta-comments"><i class="fa fa-comment-o"></i>'. __( 'Comments are off for this post', 'illdy' ) .'</span>' ) : '' );
+                $output .= 
+                    '<span class="post-meta-time"><i class="fa fa-calendar"></i><time datetime="'
+                    . sprintf( '%s-%s-%s', 
+                        get_the_date( 'Y' ), 
+                        get_the_date( 'm' ), 
+                        get_the_date( 'd' ) 
+                    ) .'">'. get_the_date().'</time></span>';
+
+                $output .= 
+                    '<span class="post-meta-categories"><i class="fa fa-folder-o" aria-hidden="true"></i>'
+                    . $categories_list
+                    . '</span>';
+
+                $output .= 
+                    ( ( $display_number_comments == 1 ) 
+                    ? 
+                        ( comments_open() ) 
+                        ? 
+                            ( $number_comments == 0 ) 
+                            ? 
+                                sprintf( 
+                                    '<span class="post-meta-comments"><i class="fa fa-comment-o"></i>'
+                                    . __( $txt_id_no_comments, 'illdy' ) .'</span>' 
+                                ) 
+                            : 
+                                ( $number_comments > 1 ) 
+                                ? 
+                                    sprintf( 
+                                        '<span class="post-meta-comments"><i class="fa fa-comment-o"></i><a class="meta-comments" href="%s" title="'
+                                        . __( $txt_id_comments, 'illdy' ) .' %s">'
+                                        . __( $txt_id_comments, 'illdy' ) .' %s</a></span>', 
+                                        get_comments_link(), $number_comments, $number_comments 
+                                    ) 
+                                : 
+                                    sprintf( 
+                                        '<span class="post-meta-comments"><i class="fa fa-comment-o"></i><a class="meta-comments" href="%s" title="'
+                                        . __( $txt_id_1_comment, 'illdy' ) .'">'
+                                        . __( $txt_id_1_comment, 'illdy' ) .'</a></span>', 
+                                        get_comments_link() 
+                                    ) 
+                        : 
+                            sprintf( 
+                                '<span class="post-meta-comments"><i class="fa fa-comment-o"></i>'
+                                . __( $txt_id_comments_are_off_for_this_post, 'illdy' ) .'</span>' 
+                            ) 
+                    : 
+                        '' 
+                    );
+                
                 $output .= '</div><!--/.blog-post-meta-->';
 
                 echo $output;
@@ -86,6 +141,12 @@ if( !class_exists( 'Illdy_Entry_Meta_Output' ) ) {
         public function archive_entry_meta_output() {
             global $post;
 
+            $txt_id_comments = "liczba komentarzy: ";
+            $txt_id_tags = "Tagi:";
+            $txt_id_1_comment = "1 komentarz";
+            $txt_id_no_comments = "brak komentarzy";
+            $txt_id_comments_are_off_for_this_post = "Komentarze dla tego postu zostały wyłączone";
+
             $number_comments = get_comments_number();
             $categories_list = get_the_category_list( esc_html__( ', ', 'illdy' ) );
             $post_standard_enable_author = get_theme_mod( 'illdy_post_standard_enable_author', 1 );
@@ -93,10 +154,58 @@ if( !class_exists( 'Illdy_Entry_Meta_Output' ) ) {
             $output = '';
 
             $output .= '<div class="blog-post-meta">';
-                $output .= ( ( $post_standard_enable_author == 1 ) ? '<span class="post-meta-author"><i class="fa fa-user"></i>'. esc_html( get_the_author() ) .'</span>' : '' );
-                $output .= '<span class="post-meta-time"><i class="fa fa-calendar"></i><time datetime="'. sprintf( '%s-%s-%s', get_the_date( 'Y' ), get_the_date( 'm' ), get_the_date( 'd' ) ) .'">'. get_the_date().'</time></span>';
-                $output .= '<span class="post-meta-categories"><i class="fa fa-folder-o" aria-hidden="true"></i>'.$categories_list.'</span>';
-                $output .= ( comments_open() ) ? ( $number_comments == 0 ) ? sprintf( '<span class="post-meta-comments"><i class="fa fa-comment-o"></i>'. __( 'No comments', 'illdy' ) .'</span>' ) : ( $number_comments > 1 ) ? sprintf( '<span class="post-meta-comments"><i class="fa fa-comment-o"></i><a class="meta-comments" href="%s" title="%s '. __( 'comments', 'illdy' ) .'">%s '. __( 'comments', 'illdy' ) .'</a></span>', get_comments_link(), $number_comments, $number_comments ) : sprintf( '<span class="post-meta-comments"><i class="fa fa-comment-o"></i><a class="meta-comments" href="%s" title="'. __( '1 comment', 'illdy' ) .'">'. __( '1 comment', 'illdy' ) .'</a></span>', get_comments_link() ) : sprintf( '<span class="post-meta-comments"><i class="fa fa-comment-o"></i>'. __( 'Comments are off for this post', 'illdy' ) .'</span>' );
+            $output .= 
+                ( ( $post_standard_enable_author == 1 ) 
+                ? 
+                    '<span class="post-meta-author"><i class="fa fa-user"></i>'
+                    . esc_html( get_the_author() ) .'</span>' 
+                : 
+                    ''
+                );
+
+            $output .= 
+                '<span class="post-meta-time"><i class="fa fa-calendar"></i><time datetime="'
+                . sprintf( '%s-%s-%s', 
+                    get_the_date( 'Y' ), 
+                    get_the_date( 'm' ), 
+                    get_the_date( 'd' ) 
+                ) .'">'. get_the_date().'</time></span>';
+
+            $output .= 
+                '<span class="post-meta-categories"><i class="fa fa-folder-o" aria-hidden="true"></i>'
+                .$categories_list.'</span>';
+
+            $output .= 
+                ( comments_open() ) 
+                ? 
+                    ( $number_comments == 0 ) 
+                    ? 
+                        sprintf( 
+                            '<span class="post-meta-comments"><i class="fa fa-comment-o"></i>'
+                            . __( $txt_id_no_comments, 'illdy' ) .'</span>' 
+                        ) 
+                    : 
+                        ( $number_comments > 1 ) 
+                        ? 
+                            sprintf( 
+                                '<span class="post-meta-comments"><i class="fa fa-comment-o"></i><a class="meta-comments" href="%s" title="'
+                                . __( $txt_id_comments, 'illdy' ) .' %s"> '
+                                . __( $txt_id_comments, 'illdy' ) .' %s</a></span>', 
+                                get_comments_link(), $number_comments, $number_comments
+                            ) 
+                        : 
+                            sprintf(
+                                '<span class="post-meta-comments"><i class="fa fa-comment-o"></i><a class="meta-comments" href="%s" title="'
+                                . __( $txt_id_1_comment, 'illdy' ) .'">'
+                                . __( $txt_id_1_comment, 'illdy' ) .'</a></span>', 
+                                get_comments_link()
+                            ) 
+                : 
+                    sprintf(
+                        '<span class="post-meta-comments"><i class="fa fa-comment-o"></i>'
+                        . __( $txt_id_comments_are_off_for_this_post, 'illdy' ) .'</span>' 
+                    );
+
             $output .= '</div><!--/.blog-post-meta-->';
 
             echo $output;
@@ -113,8 +222,8 @@ if( !class_exists( 'Illdy_Entry_Meta_Output' ) ) {
             if( $display_tags_post_meta == 1 ) {
                 if( get_the_tag_list() ) {
                     $output .= '<ul class="blog-post-tags">';
-                        $output .= '<li>'. __( 'Tags: ', 'illdy' ) .'</li>';
-                        $output .= get_the_tag_list( '<li>','</li>, <li>','</li>' );
+                    $output .= '<li>'. __( $txt_id_tags, 'illdy' ) .'</li>';
+                    $output .= get_the_tag_list( '<li>','</li>, <li>','</li>' );
                     $output .= '</ul><!--/.blog-post-tags-->';
                 }
             }
