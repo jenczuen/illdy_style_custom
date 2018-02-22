@@ -12,6 +12,23 @@
  */
 ?>
 <?php
+
+$txt_id_comment_navigation = "Nawigacja komentarzy";
+$txt_id_older_comments = "Starsze komentarze";
+$txt_id_newer_comments = "Nowsze komentarze";
+// $txt_id_one_thought_on = 'Jedna uwaga na temat &ldquo;%2$s&rdquo;';
+// $txt_id_some_thoughts_on = '%1$s uwag na temat &ldquo;%2$s&rdquo;';
+$txt_id_some_thoughts_on = 'Komentarze na temat &ldquo;%2$s&rdquo;';
+
+$txt_id_comments_are_closed = "Komentowanie wyłączone";
+$txt_id_author_name = "Imię";
+$txt_id_author_email = "Email";
+$txt_id_author_website = "Strona internetowa";
+$txt_id_message = "Wiadomość";
+$txt_id_send = "Wyślij";
+$txt_id_leave_a_comment = "Zostaw komentarz";
+$txt_id_leave_a_comment_to = "Zostaw komentarz %s";
+
 if ( post_password_required() ) {
 	return;
 }
@@ -21,16 +38,27 @@ if ( post_password_required() ) {
 	<?php if ( have_comments() ): ?>
 			<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>
 				<nav id="comment-nav-above" class="navigation comment-navigation" role="navigation">
-					<h2 class="screen-reader-text"><?php _e( 'Comment navigation', 'illdy' ); ?></h2>
+					<h2 class="screen-reader-text">
+						<?php _e( $txt_id_comment_navigation, 'illdy' ); ?>
+					</h2>
 					<div class="nav-links">
-						<div class="nav-previous"><?php previous_comments_link( __( 'Older Comments', 'illdy' ) ); ?></div>
-						<div class="nav-next"><?php next_comments_link( __( 'Newer Comments', 'illdy' ) ); ?></div>
+						<div class="nav-previous">
+							<?php previous_comments_link( __( $txt_id_older_comments, 'illdy' ) ); ?>
+						</div>
+						<div class="nav-next">
+							<?php next_comments_link( __( $txt_id_newer_comments, 'illdy' ) ); ?>
+						</div>
 					</div><!-- .nav-links -->
 				</nav><!-- #comment-nav-above -->
 			<?php endif; ?>
 
 			<div id="comments-list">
-				<h3 class="medium"><?php printf( esc_html( _nx( 'One thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', get_comments_number(), 'comments title', 'illdy' ) ), number_format_i18n( get_comments_number() ), '<span>' . get_the_title() . '</span>' ); ?></h3>
+				<h3 class="medium">
+					<?php printf(
+						esc_html($txt_id_some_thoughts_on), 
+						0, '<span>' . get_the_title() . '</span>' 
+					); ?>
+				</h3>
 				<ul class="comments">
 					<?php
 					wp_list_comments( array(
@@ -43,12 +71,16 @@ if ( post_password_required() ) {
 
 			<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>
 				<nav id="comment-nav-below" class="navigation comment-navigation" role="navigation">
-					<h2 class="screen-reader-text"><?php _e( 'Comment navigation', 'illdy' ); ?></h2>
+					<h2 class="screen-reader-text">
+						<?php _e( $txt_id_comment_navigation, 'illdy' ); ?>
+					</h2>
 					<div class="nav-links">
-
-						<div class="nav-previous"><?php previous_comments_link( __( 'Older Comments', 'illdy' ) ); ?></div>
-						<div class="nav-next"><?php next_comments_link( __( 'Newer Comments', 'illdy' ) ); ?></div>
-
+						<div class="nav-previous">
+							<?php previous_comments_link( __( $txt_id_older_comments, 'illdy' ) ); ?>
+						</div>
+						<div class="nav-next">
+							<?php next_comments_link( __( $txt_id_newer_comments, 'illdy' ) ); ?>
+						</div>
 					</div><!-- .nav-links -->
 				</nav><!-- #comment-nav-below -->
 			<?php endif; ?>
@@ -56,9 +88,15 @@ if ( post_password_required() ) {
 
 	<?php
 		// If comments are closed and there are comments, let's leave a little note, shall we?
-		if ( ! comments_open() && '0' != get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) :
+		if ( 
+			! comments_open() 
+			&& '0' != get_comments_number() 
+			&& post_type_supports( get_post_type(), 'comments' ) 
+		) :
 	?>
-		<p class="no-comments"><?php _e( 'Comments are closed.', 'illdy' ); ?></p>
+		<p class="no-comments">
+			<?php _e( $txt_id_comments_are_closed, 'illdy' ); ?>
+		</p>
 	<?php endif; ?>
 
 	<?php
@@ -82,16 +120,48 @@ if ( post_password_required() ) {
 		$url = '';
 
 	$fields =  array(
-		'author'	=> '<div class="row"><div class="col-sm-4"><input class="input-full" placeholder="'. __( 'Name', 'illdy' ) .'" name="author" type="text" value="' . esc_attr( $name ) . '" ' . $aria_req . ' /></div>',
-		'email'		=> '<div class="col-sm-4"><input class="input-full" placeholder="'. __( 'Email', 'illdy' ) .'" name="email" type="email" value="' . esc_attr( $email ) . '" ' . $aria_req . ' /></div>',
-		'url'		=> '<div class="col-sm-4"><input class="input-full" placeholder="'. __( 'Website', 'illdy' ) .'" name="url" type="url" value="' . esc_url( $url ) . '" /></div>'
+		'author' => 
+			'<div class="row"><div class="col-sm-4"><input class="input-full" placeholder="'
+			. __( $txt_id_author_name, 'illdy' ) 
+			.'" name="author" type="text" value="' 
+			. esc_attr( $name ) . '" ' . $aria_req . ' /></div>',
+
+		'email'	=> 
+			'<div class="col-sm-4"><input class="input-full" placeholder="'
+			. __( $txt_id_author_email, 'illdy' ) 
+			.'" name="email" type="email" value="' 
+			. esc_attr( $email ) . '" ' . $aria_req . ' /></div>',
+
+		'url' => 
+			'<div class="col-sm-4"><input class="input-full" placeholder="'
+			. __( $txt_id_author_website, 'illdy' ) 
+			.'" name="url" type="url" value="' 
+			. esc_url( $url ) . '" /></div>'
 	);
 
-	if( is_user_logged_in() ) {
-		$comment_textarea = '<div class="row"><div class="col-sm-12"><textarea placeholder="'. __( 'Message', 'illdy' ) .'" name="comment" aria-required="true"></textarea></div><!--/.col-sm-12--></div><!--/.row-->';
-	} else {
-		$comment_textarea = '<div class="col-sm-12"><textarea placeholder="'. __( 'Message', 'illdy' ) .'" name="comment" aria-required="true"></textarea></div><!--/.col-sm-12--></div><!--/.row-->';
+	if( is_user_logged_in() ) 
+	{
+		$comment_textarea = 
+			'<div class="row"><div class="col-sm-12"><textarea placeholder="'
+			. __( $txt_id_message, 'illdy' ) 
+			.'" name="comment" aria-required="true"></textarea></div><!--/.col-sm-12--></div><!--/.row-->';
+	} 
+	else
+	{
+		$comment_textarea = 
+			'<div class="col-sm-12"><textarea placeholder="'
+			. __( $txt_id_message, 'illdy' ) 
+			.'" name="comment" aria-required="true"></textarea></div><!--/.col-sm-12--></div><!--/.row-->';
 	}
 	?>
-	<?php comment_form( array( 'fields' => $fields, 'comment_field' => $comment_textarea, 'id_submit' => 'input-submit', 'label_submit' => esc_attr__( 'Send', 'illdy' ), 'title_reply' => esc_attr__( 'Leave a comment', 'illdy' ), 'title_reply_to' => esc_attr__( 'Leave a comment to %s', 'illdy' ) ) ); ?>
+	<?php comment_form( 
+		array( 
+			'fields' => $fields, 
+			'comment_field' => $comment_textarea, 
+			'id_submit' => 'input-submit', 
+			'label_submit' => esc_attr__( $txt_id_send, 'illdy' ), 
+			'title_reply' => esc_attr__( $txt_id_leave_a_comment, 'illdy' ), 
+			'title_reply_to' => esc_attr__( $txt_id_leave_a_comment_to, 'illdy' ) 
+		)
+	); ?>
 </div><!--/#comments-->
