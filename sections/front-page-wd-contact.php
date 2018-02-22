@@ -27,7 +27,7 @@ $address2               = "00-000 Miasto";
 // CONTACT
 $customer_support_title = "Dane kontaktowe";
 $email_title            = "E-mail:";
-$email                  = "adres@email.com";
+$email                  = "kontakt@instytutwlodkowica.pl";
 $phone_title            = "Telefon:";
 $phone                  = "+48 555 555 555";
 // ????

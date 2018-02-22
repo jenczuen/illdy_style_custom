@@ -12,7 +12,7 @@ $general_title = "Patron";
 $general_background_image = get_template_directory_uri() . '/layout/images/patron_background.png';
 $patron_head_image = get_template_directory_uri() . '/layout/images/patron_head.png';
 $patron_name = "Paweł Włodkowic";
-$general_desc = "Awesome theme with great design and helpfull support. If you do not know how to code your own WordPress theme, but you still want a good-looking website for your business, Illdy might be exactly what you need. It is a slick theme with a lot of of features to choose from. You can customize whatever section you  want and you can rest assure that no matter what device your website is viewed on it looks  great.";
+$general_desc = "cytat";
 ?>
 
 <section id="wd_patron" class="front-page-section" style="<?php if( $general_background_image ): echo 'background-image: url('. esc_url( $general_background_image ) .')'; endif; ?>">
