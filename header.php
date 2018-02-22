@@ -83,7 +83,7 @@ else: echo 'header-blog'; endif; ?>" style="<?php echo $style ?>">
 				</div><!--/.col-sm-2-->
 				<?php if (!is_front_page()) { ?>
 					<div class="col-sm-8 col-xs-4">
-						<nav class="header-navigation">
+						<nav class="header-navigation" id="wd-header-navigation">
 						<?php
 							wp_nav_menu( array(
 								'theme_location'  => 'primary-menu',

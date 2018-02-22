@@ -756,3 +756,8 @@ a.button:hover {
 	height: auto;
 	min-width: 300px;
 }
+
+#header #wd-header-navigation ul li a {
+	font-size: 30px;
+
+}
