@@ -16,7 +16,10 @@
 
 	<div>
 		<ul class="wd-top-menu">
-			<li><a href="#wd_partners">Partnerzy</a></li>
+			<?php if( is_active_sidebar( "front-page-wd-partners-sidebar" ) ): ?>
+				<li><a href="#wd_partners">Partnerzy</a></li>
+			<?php endif; ?>	
+
 			<li><a href="#wd_team">Zespół</a></li>
 			<li><a href="#wd_contact">Kontakt</a></li>
 			<li><a href="#wd_patron">Patron</a></li>

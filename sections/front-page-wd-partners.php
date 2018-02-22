@@ -13,6 +13,7 @@ $title = "Partnerzy";
 $desc = "Instytucje, które współpracowały z naszym instytutem:";
 $sidebar_id = "front-page-wd-partners-sidebar";
 
+if( is_active_sidebar( $sidebar_id ) ):
 ?>
 
 <section id="wd_partners" class="front-page-section">
@@ -36,20 +37,19 @@ $sidebar_id = "front-page-wd-partners-sidebar";
 		</div><!--/.section-header-->
 	<?php endif; ?>
 
-
 	<div class="section-content">
 		<div class="container">
 			<div class="row inline-columns">
 				<?php
-				if( is_active_sidebar( $sidebar_id ) ):
 					dynamic_sidebar( $sidebar_id );
-				endif;
 				?>
 			</div><!--/.row-->
 		</div><!--/.container-->
 	</div><!--/.section-content-->
 
 </section><!--/#team.front-page-section-->
+
+<?php endif; ?>
 
 
 
